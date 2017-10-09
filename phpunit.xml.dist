@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit colors="true"
+		 stopOnFailure="true"
+		 syntaxCheck="true"
+		 bootstrap="tests/bootstrap.php">
+
+	<testsuites>
+		<testsuite name="Test Suite">
+			<directory>tests/src</directory>
+		</testsuite>
+	</testsuites>
+
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory>src</directory>
+		</whitelist>
+	</filter>
+
+	<php>
+		<var name="DB_DSN"    value="mysql:host=localhost;dbname=NAME;charset=utf8" />
+		<var name="DB_USER"   value="user" />
+		<var name="DB_PASSWD" value="pass" />
+		<var name="DB_DBNAME" value="NAME" />
+
+		<var name="DB_XML_DUMP" value="tests/mysql_database.xml" />
+
+		<var name="DB_TABLE_ITEMCODES" value="fhs_itemcodes" />
+	</php>
+
+	<logging>
+		<log type="coverage-clover" target="build/logs/clover.xml"/>
+		<log type="coverage-html"   target="build/logs/html/"/>
+		<log type="testdox-html"    target="build/logs/testdox.html"/>
+		<log type="coverage-text"   target="php://stdout" showUncoveredFiles="true" />
+	</logging>
+
+</phpunit>

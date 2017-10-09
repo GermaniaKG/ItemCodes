@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="PHPUNIT">
+
+
+	<table_data name="fhs_itemcodes">
+		<row>
+			<field name="id">1</field>
+			<field name="code">LU</field>
+			<field name="name">Profilsysteme</field>
+			<field name="added_datetime">2017-10-05 12:44:40</field>
+			<field name="enabled">-1</field>
+			<field name="display">-1</field>
+			<field name="comment"  xsi:nil="true"></field>
+		</row>
+		<row>
+			<field name="id">2</field>
+			<field name="code">BIN</field>
+			<field name="name">Büsche Inside</field>
+			<field name="added_datetime">2017-10-05 12:44:40</field>
+			<field name="enabled">1</field>
+			<field name="display">1</field>
+			<field name="comment"  xsi:nil="true"></field>
+		</row>
+		<row>
+			<field name="id">3</field>
+			<field name="code">BVI</field>
+			<field name="name">Büsche Vion</field>
+			<field name="added_datetime">2017-10-05 12:44:40</field>
+			<field name="enabled">1</field>
+			<field name="display">1</field>
+			<field name="comment"  xsi:nil="true"></field>
+		</row>
+		<row>
+			<field name="id">4</field>
+			<field name="code">CHEMNITZ</field>
+			<field name="name">Chemnitz</field>
+			<field name="added_datetime">2017-10-05 12:44:40</field>
+			<field name="enabled">1</field>
+			<field name="display">1</field>
+			<field name="comment"  xsi:nil="true"></field>
+		</row>
+		<row>
+			<field name="id">5</field>
+			<field name="code">DAC</field>
+			<field name="name">Dachfenster</field>
+			<field name="added_datetime">2017-10-05 12:44:40</field>
+			<field name="enabled">1</field>
+			<field name="display">1</field>
+			<field name="comment"  xsi:nil="true"></field>
+		</row>
+		<row>
+			<field name="id">6</field>
+			<field name="code">DSD</field>
+			<field name="name">Duosoft-Doppelrollo</field>
+			<field name="added_datetime">2017-10-05 12:44:40</field>
+			<field name="enabled">1</field>
+			<field name="display">1</field>
+			<field name="comment"  xsi:nil="true"></field>
+		</row>
+		<row>
+			<field name="id">7</field>
+			<field name="code">ELE</field>
+			<field name="name">Elektro</field>
+			<field name="added_datetime">2017-10-05 12:44:40</field>
+			<field name="enabled">1</field>
+			<field name="display">1</field>
+			<field name="comment"  xsi:nil="true"></field>
+		</row>
+
+	</table_data>
+
+
+</database>
+</mysqldump>
