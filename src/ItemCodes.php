@@ -27,7 +27,7 @@ class ItemCodes implements ContainerInterface, \Countable, \IteratorAggregate
     public function get($code)
     {
         if (!$this->has($code)):
-            throw new ItemCodeNotFoundException;
+            throw new ItemCodeNotFoundException( "Could not find Item code '$code'." );
         endif;
 
         return $this->item_codes[ $code ];
