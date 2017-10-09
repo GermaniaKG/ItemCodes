@@ -1,6 +1,9 @@
 <?php
 namespace Germania\Nav\ItemCodes;
 
+use Psr\Log\LoggerInterface;
+use Psr\Log\NullLogger;
+
 class PdoItemCodes extends ItemCodes
 {
 
@@ -14,16 +17,20 @@ class PdoItemCodes extends ItemCodes
      */
     public $pdo;
 
-
+    /**
+     * @var LoggerInterface
+     */
+    public $logger;
 
     /**
      * @param \PDO   $pdo        PDO instance
      * @param string $table_name The table to work on
      */
-    public function __construct( \PDO $pdo, $table_name, ItemCodeInterface $itemcode = null)
+    public function __construct( \PDO $pdo, $table_name, ItemCodeInterface $itemcode = null, LoggerInterface $logger = null )
     {
         $this->table_name = $table_name;
         $this->pdo = $pdo;
+        $this->logger = $logger ?: new NullLogger;
 
         $sql = "SELECT
         -- This is the unique key
