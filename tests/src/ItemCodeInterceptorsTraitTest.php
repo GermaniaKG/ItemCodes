@@ -6,7 +6,7 @@ use Germania\Nav\ItemCodes\ItemCodeInterceptorsTrait;
 use Germania\Nav\ItemCodes\ItemCodeProviderInterface;
 use Germania\Nav\ItemCodes\Exceptions\InvalidItemCodeArgumentException;
 
-class ItemCodeInterceptorsTraitTest extends \PHPUnit_Framework_TestCase
+class ItemCodeInterceptorsTraitTest extends \PHPUnit\Framework\TestCase
 {
     public function testGetterAndSetter()
     {

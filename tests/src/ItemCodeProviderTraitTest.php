@@ -4,7 +4,7 @@ namespace tests;
 use Germania\Nav\ItemCodes\ItemCodeProviderTrait;
 use Germania\Nav\ItemCodes\ItemCodeInterface;
 
-class ItemCodeProviderTraitTest extends \PHPUnit_Framework_TestCase
+class ItemCodeProviderTraitTest extends \PHPUnit\Framework\TestCase
 {
 
 

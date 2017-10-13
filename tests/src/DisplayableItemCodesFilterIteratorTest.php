@@ -7,7 +7,7 @@ use Germania\Nav\ItemCodes\ItemCodes;
 use Germania\Nav\ItemCodes\ItemCodeInterface;
 use Germania\Nav\ItemCodes\Filters\DisplayableItemCodesFilterIterator;
 
-class DisplayableItemCodesFilterIteratorTest extends \PHPUnit_Framework_TestCase
+class DisplayableItemCodesFilterIteratorTest extends \PHPUnit\Framework\TestCase
 {
     public function testFilter()
     {
