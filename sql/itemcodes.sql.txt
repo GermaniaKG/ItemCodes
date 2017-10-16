@@ -20,12 +20,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Export von Tabelle fhs_itemcodes
+# Export von Tabelle itemcodes
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `fhs_itemcodes`;
+DROP TABLE IF EXISTS `itemcodes`;
 
-CREATE TABLE `fhs_itemcodes` (
+CREATE TABLE `itemcodes` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `code` varchar(16) NOT NULL DEFAULT '',
   `name` varchar(256) NOT NULL DEFAULT '',

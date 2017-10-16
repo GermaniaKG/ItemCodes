@@ -17,7 +17,7 @@ class InsertOrUpdateItemCode
      *
      * @var string
      */
-    public $table = 'fhs_itemcodes';
+    public $table = 'itemcodes';
 
 
     /**

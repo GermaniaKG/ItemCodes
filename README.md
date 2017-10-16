@@ -16,7 +16,7 @@ Alternatively, add this package directly to your composer.json:
 }
 ```
 
-
+Make sure the **itemcodes** table exists; see [Database](#database) section.
 
 ## Development
 
@@ -25,6 +25,10 @@ $ git clone https://github.com/GermaniaKG/ItemCodes.git
 $ cd ItemCodes
 $ composer install
 ```
+
+## Database
+
+Setup the MySQL table **itemcodes** as described in `sql/itemcodes.sql.txt`.
 
 ## Unit tests
 
