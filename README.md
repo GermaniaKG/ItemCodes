@@ -70,7 +70,11 @@ $result = $insert_or_update->execute( $itemcode );
 // and 2, when REPLACEd
 ```
 
+## Issues
 
+See [issues list.][i0]
+
+[i0]: https://github.com/GermaniaKG/ItemCodes/issues 
 
 ## Unit tests
 
