@@ -28,8 +28,8 @@
 	},
 	"require-dev": {
 		"satooshi/php-coveralls": "^1.0",
-		"phpunit/phpunit": "^6.0",
-		"phpunit/dbunit": "^3.0"
+		"phpunit/phpunit": "^5.0|^6.0",
+		"phpunit/dbunit": "^2.0|^3.0"
 	},
 
   "scripts": {
