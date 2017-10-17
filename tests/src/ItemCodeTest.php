@@ -3,7 +3,7 @@ namespace tests;
 
 use Germania\Nav\ItemCodes\ItemCode;
 
-class ItemCodeTest extends \PHPUnit_Framework_TestCase
+class ItemCodeTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testInstantiation()

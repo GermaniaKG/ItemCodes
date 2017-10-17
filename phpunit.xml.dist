@@ -25,7 +25,7 @@
 
 		<var name="DB_XML_DUMP" value="tests/mysql_database.xml" />
 
-		<var name="DB_TABLE_ITEMCODES" value="fhs_itemcodes" />
+		<var name="DB_TABLE_ITEMCODES" value="itemcodes" />
 	</php>
 
 	<logging>

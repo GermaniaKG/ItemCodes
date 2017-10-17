@@ -17,7 +17,7 @@ class InsertOrUpdateItemCode
      *
      * @var string
      */
-    public $table = 'fhs_itemcodes';
+    public $table;
 
 
     /**
@@ -39,10 +39,10 @@ class InsertOrUpdateItemCode
 
     /**
      * @param \PDO                 $pdo    PDO instance
+     * @param string               $table  Table name to work with.
      * @param LoggerInterface|null $logger Optional: PSR3 Logger
-     * @param string               $table  Optional: table name to work with.
      */
-    public function __construct(\PDO $pdo, LoggerInterface $logger = null, $table = null)
+    public function __construct(\PDO $pdo, $table, LoggerInterface $logger = null)
     {
         $this->table = $table ?: $this->table;
 

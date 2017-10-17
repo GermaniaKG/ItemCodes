@@ -26,7 +26,8 @@ class PdoItemCodesTest extends DatabaseTestCaseAbstract
         $this->assertInstanceOf(ContainerInterface::class, $sut);
 
         // grab one
-        $first = array_shift(iterator_to_array( $sut ));
+        $items = iterator_to_array( $sut );
+        $first = array_shift($items);
 
         $has_code = $first->getCode();
 
@@ -42,7 +43,8 @@ class PdoItemCodesTest extends DatabaseTestCaseAbstract
         $this->assertInstanceOf(ContainerInterface::class, $sut);
 
         // grab one
-        $first = array_shift(iterator_to_array( $sut ));
+        $items = iterator_to_array( $sut );
+        $first = array_shift($items);
 
         $has_not_code = 'fgjhröejhgwuhgjkwejbf';
 

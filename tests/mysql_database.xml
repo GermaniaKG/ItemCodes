@@ -3,7 +3,7 @@
 <database name="PHPUNIT">
 
 
-	<table_data name="fhs_itemcodes">
+	<table_data name="itemcodes">
 		<row>
 			<field name="id">1</field>
 			<field name="code">LU</field>
