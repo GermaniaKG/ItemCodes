@@ -43,12 +43,13 @@ abstract class ItemCodeAbstract implements ItemCodeInterface
         return $this->name;
     }
 
+
     /**
      * @return boolean
      */
     public function isEnabled()
     {
-        return $this->enabled;
+        return $this->enabled > 0;
     }
 
     /**
@@ -56,6 +57,7 @@ abstract class ItemCodeAbstract implements ItemCodeInterface
      */
     public function isDisplayable()
     {
-        return $this->display;
+        return $this->display > 0;
     }
+
 }
