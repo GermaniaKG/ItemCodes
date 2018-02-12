@@ -29,7 +29,11 @@ class ItemCodeFilterIterator extends \FilterIterator
         $current = $this->getInnerIterator()->current();
 
         if ($current instanceOf ItemCodeProviderInterface):
-            return $current->getItemCode()->getCode() == $this->code->getCode();
+            $current_code = $current->getItemCode();
+
+            $current_code_str = $current_code instanceOf ItemCodeInterface ? $current_code->getCode() : $current_code;
+
+            return $current_code_str == $this->code->getCode();
         endif;
 
         return false;

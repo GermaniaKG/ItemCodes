@@ -16,13 +16,13 @@ class InsertOrUpdateItemCodeTest extends DatabaseTestCaseAbstract
     public function testInstantiation()
     {
         $logger = null;
-        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $logger, $GLOBALS['DB_TABLE_ITEMCODES'] );
+        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
     }
 
     public function testInsertion()
     {
         $logger = null;
-        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $logger, $GLOBALS['DB_TABLE_ITEMCODES'] );
+        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
 
         $itemcode_mock_1 = $this->prophesize( ItemCodeInterface::class );
         $itemcode_mock_1->getCode()->willReturn("XYZ");
@@ -37,7 +37,7 @@ class InsertOrUpdateItemCodeTest extends DatabaseTestCaseAbstract
     public function testInvokationInsertion()
     {
         $logger = null;
-        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $logger, $GLOBALS['DB_TABLE_ITEMCODES'] );
+        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
 
         $itemcode_mock_1 = $this->prophesize( ItemCodeInterface::class );
         $itemcode_mock_1->getCode()->willReturn("XYZ");
@@ -52,7 +52,7 @@ class InsertOrUpdateItemCodeTest extends DatabaseTestCaseAbstract
     public function testUpdate()
     {
         $logger = null;
-        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $logger, $GLOBALS['DB_TABLE_ITEMCODES'] );
+        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
 
         $itemcode_mock_1 = $this->prophesize( ItemCodeInterface::class );
         $itemcode_mock_1->getCode()->willReturn("XYZ");
