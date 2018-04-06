@@ -1,9 +1,13 @@
 <?php
 namespace tests;
 
+use PHPUnit\Framework\TestCase;
+use PHPUnit\DbUnit\TestCaseTrait;
 
-abstract class DatabaseTestCaseAbstract extends \PHPUnit\DbUnit\TestCase
+abstract class DatabaseTestCaseAbstract extends TestCase
 {
+
+    use TestCaseTrait;
 
     // only instantiate pdo once for test clean-up/fixture load
     static protected $pdo = null;
