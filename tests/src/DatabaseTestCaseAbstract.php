@@ -2,7 +2,7 @@
 namespace tests;
 
 
-abstract class DatabaseTestCaseAbstract extends \PHPUnit\DbUnit\TestCase
+abstract class DatabaseTestCaseAbstract extends \PHPUnit_Extensions_Database_TestCase
 {
 
     // only instantiate pdo once for test clean-up/fixture load
