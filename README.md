@@ -1,8 +1,14 @@
 # Germania KG · ItemCodes
 
+[![Packagist](https://img.shields.io/packagist/v/germania-kg/itemcodes.svg?style=flat)](https://packagist.org/packages/germania-kg/itemcodes)
+[![PHP version](https://img.shields.io/packagist/php-v/germania-kg/itemcodes.svg)](https://packagist.org/packages/germania-kg/itemcodes)
+[![Build Status](https://img.shields.io/travis/GermaniaKG/ItemCodes.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/ItemCodes)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/ItemCodes/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/ItemCodes/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/ItemCodes/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/ItemCodes/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/ItemCodes/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/ItemCodes/build-status/master)
 
 
-## Installation
+## Installation with Composer
 
 ```bash
 $ composer require germania-kg/itemcodes
@@ -18,13 +24,6 @@ Alternatively, add this package directly to your composer.json:
 
 Make sure the **itemcodes** table exists; see [Database](#database) section.
 
-## Development
-
-```bash
-$ git clone https://github.com/GermaniaKG/ItemCodes.git
-$ cd ItemCodes
-$ composer install
-```
 
 ## Database
 
@@ -81,10 +80,21 @@ $result = $insert_or_update->execute( $itemcode );
 [i1]: https://github.com/GermaniaKG/ItemCodes/issues/1
 [i2]: https://github.com/GermaniaKG/ItemCodes/issues/2 
 
-## Unit tests
-
-Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. Run [PhpUnit](https://phpunit.de/) like this:
+## Development
 
 ```bash
+$ git clone https://github.com/GermaniaKG/ItemCodes.git
+$ cd ItemCodes
+$ composer install
+```
+
+## Unit tests
+
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. Run [PhpUnit](https://phpunit.de/) test or composer scripts like this:
+
+```bash
+$ composer test
+# or
 $ vendor/bin/phpunit
 ```
+
