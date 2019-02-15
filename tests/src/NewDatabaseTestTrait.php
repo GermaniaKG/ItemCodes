@@ -67,7 +67,7 @@ trait NewDatabaseTestTrait
     	$dropTables = true;
     	$db_host = $GLOBALS['DB_HOST'] ?? "127.0.0.1";
 
-		new Import($sql_dump, $GLOBALS['DB_USER'], $GLOBALS['DB_PASSWD'], $GLOBALS['DB_DBNAME'], $db_host, $dropTables);
+		new Import($sql_dump, $GLOBALS['DB_USER'], $GLOBALS['DB_PASSWD'], $GLOBALS['DB_NAME'], $db_host, $dropTables);
 
 		return $this;
     }
