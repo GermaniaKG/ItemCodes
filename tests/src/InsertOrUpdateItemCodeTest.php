@@ -1,8 +1,6 @@
 <?php
 namespace tests;
 
-use tests\DatabaseTestCaseAbstract;
-
 use Germania\Nav\ItemCodes\Actions\InsertOrUpdateItemCode;
 use Germania\Nav\ItemCodes\ItemCodeInterface;
 
@@ -10,17 +8,14 @@ use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundException;
 
 
-class InsertOrUpdateItemCodeTest extends DatabaseTestCaseAbstract
+class InsertOrUpdateItemCodeTest extends \PHPUnit\Framework\TestCase
 {
 
-    public function testInstantiation()
-    {
-        $logger = null;
-        $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
-    }
+	use NewDatabaseTestTrait;
 
     public function testInsertion()
     {
+    	$this->resetDatabase();
         $logger = null;
         $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
 
@@ -36,6 +31,7 @@ class InsertOrUpdateItemCodeTest extends DatabaseTestCaseAbstract
 
     public function testInvokationInsertion()
     {
+    	$this->resetDatabase();
         $logger = null;
         $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
 
@@ -51,8 +47,10 @@ class InsertOrUpdateItemCodeTest extends DatabaseTestCaseAbstract
 
     public function testUpdate()
     {
+    	$this->resetDatabase();    	
         $logger = null;
         $sut = new InsertOrUpdateItemCode( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'], $logger );
+
 
         $itemcode_mock_1 = $this->prophesize( ItemCodeInterface::class );
         $itemcode_mock_1->getCode()->willReturn("XYZ");
@@ -62,10 +60,10 @@ class InsertOrUpdateItemCodeTest extends DatabaseTestCaseAbstract
         $row_count = $sut->execute( $item_code1 );
         $this->assertEquals(1, $row_count);
 
-        // The LU key must exist
+        // The FOO key must exist
         $itemcode_mock_2 = $this->prophesize( ItemCodeInterface::class );
-        $itemcode_mock_2->getCode()->willReturn("LU");
-        $itemcode_mock_2->getName()->willReturn("A rewritten XYZ Item");
+        $itemcode_mock_2->getCode()->willReturn("FOO");
+        $itemcode_mock_2->getName()->willReturn("A rewritten FOO Item");
         $item_code2 = $itemcode_mock_2->reveal();
 
         $row_count = $sut->execute( $item_code2 );

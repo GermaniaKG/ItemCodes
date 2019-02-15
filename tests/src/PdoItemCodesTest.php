@@ -1,7 +1,6 @@
 <?php
 namespace tests;
 
-use tests\DatabaseTestCaseAbstract;
 
 use Germania\Nav\ItemCodes\PdoItemCodes;
 use Germania\Nav\ItemCodes\Exceptions\ItemCodeNotFoundException;
@@ -10,9 +9,12 @@ use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundException;
 
 
-class PdoItemCodesTest extends DatabaseTestCaseAbstract
+class PdoItemCodesTest extends \PHPUnit\Framework\TestCase
 {
 
+	use NewDatabaseTestTrait;
+
+	
     public function testVerySimple()
     {
         $sut = new PdoItemCodes( $this->getPdo(), $GLOBALS['DB_TABLE_ITEMCODES'] );
