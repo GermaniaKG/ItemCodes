@@ -51,10 +51,8 @@ logs/*
 _schrott
 vendor
 node_modules
-var/*
-logs/*
 config.json
 .htaccess
 tests/build
-build
+tests/logs
 phpunit.xml

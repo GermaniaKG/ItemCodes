@@ -63,9 +63,7 @@ $result = $insert_or_update->execute( $itemcode );
 
 ## Issues
 
-
-- As of release 2.0.0, Travis CI and Scrutinizer should be part of the game, but not working as expected. See issues for [Travis CI][i1] and [Scrutinizer][i2].
-- See [issues list.][i0]
+See [issues list.][i0]
 
 
 [i0]: https://github.com/GermaniaKG/ItemCodes/issues
