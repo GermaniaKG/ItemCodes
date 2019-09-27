@@ -43,11 +43,13 @@ class AutoInsertingPdoItemCodesTest extends \PHPUnit\Framework\TestCase
         // and assume it must be in the container
         $this->assertTrue( $sut->has( $has_code ));
         $item = $sut->get($has_code);
+
+        return $sut;
     }
 
 
     /**
-     * @depends testVerySimple
+     * @depends testContainerInterface
      */
     public function testAutoInsertion( $sut )
     {
@@ -64,6 +66,27 @@ class AutoInsertingPdoItemCodesTest extends \PHPUnit\Framework\TestCase
         $sut->get( $has_not_code );
         
         $this->assertTrue( $sut->has( $has_not_code ));
+    }
+
+
+    /**
+     * @depends testContainerInterface
+     */
+    public function testAutoInsertionOnPush( $sut )
+    {
+        $new_code = "CDE";
+
+        $itemcode = $this->prophesize(ItemCodeInterface::class);
+        $itemcode->getCode()->willReturn($new_code);
+        $itemcode->getName()->willReturn($new_code);
+        $itemcode_stub = $itemcode->reveal();
+
+
+        $this->assertFalse( $sut->has( $new_code ));
+        // Let SUT auto-insert
+        $sut->push( $itemcode_stub );
+        
+        $this->assertTrue( $sut->has( $new_code ));
     }
 
 
